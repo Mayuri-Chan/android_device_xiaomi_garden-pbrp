@@ -32,7 +32,6 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/ro
 PRODUCT_DEVICE := garden
 PRODUCT_NAME := omni_garden
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi 9A
 PRODUCT_MANUFACTURER := xiaomi
 
 # HACK: Set vendor patch level
@@ -42,4 +41,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Resolution
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1600
-
