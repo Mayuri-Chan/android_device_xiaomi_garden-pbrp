@@ -46,7 +46,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_DEVICE := garden
 PRODUCT_NAME := omni_garden
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := Redmi MT6765G
 PRODUCT_MANUFACTURER := xiaomi
 
 # Resolution
