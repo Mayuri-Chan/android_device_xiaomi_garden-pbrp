@@ -8,5 +8,6 @@ cc_library_static {
         "-Wall",
     ],
     srcs: ["init_garden.cpp"],
+    static_libs: [ "fmtlib" ],
     recovery_available: true,
 }
