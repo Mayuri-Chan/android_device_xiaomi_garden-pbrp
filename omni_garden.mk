@@ -14,13 +14,13 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/xiaomi/dandelion
+DEVICE_PATH := device/xiaomi/garden
 
 # Release name
-PRODUCT_RELEASE_NAME := dandelion
+PRODUCT_RELEASE_NAME := garden
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/pb/config/common.mk)
@@ -29,8 +29,8 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(DEVICE_PATH)/recovery/ro
     $(DEVICE_PATH)/prebuilt/dtb:dtb.img
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := dandelion
-PRODUCT_NAME := omni_dandelion
+PRODUCT_DEVICE := garden
+PRODUCT_NAME := omni_garden
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi 9A
 PRODUCT_MANUFACTURER := xiaomi
