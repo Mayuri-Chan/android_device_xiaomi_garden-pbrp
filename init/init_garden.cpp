@@ -72,11 +72,16 @@ namespace android {
         void vendor_load_properties() {
             const std::string region = GetProperty("ro.boot.hwc", "");
             const std::string hwname = GetProperty("ro.boot.hwname", "");
+            const std::string product_name = GetProperty("ro.product.name", "");
 
-            if (hwname == "angelica") {
+            if (hwname == "angelica" || hwname == "angelica_second") {
                 model_property_override("angelica", "Redmi 9C");
             } else if (hwname == "angelicain") {
-                model_property_override("angelicain", "Poco C3");
+                if (product_name == "angelicain_in") {
+                    model_property_override("angelicain_in", "POCO C31");
+                } else {
+                    model_property_override("angelicain", "POCO C3");
+                }
             } else if (hwname == "angelican") {
                 model_property_override("angelican", "Redmi 9C NFC");
             } else if (hwname == "cattail") {
@@ -84,6 +89,8 @@ namespace android {
             } else if (hwname == "dandelion") {
                 if (region == "India_9i") {
                     model_property_override("dandelion", "Redmi 9I");
+                } else if (region == "VDF") {
+                    model_property_override("dandelion", "Redmi 9AT");
                 } else {
                     model_property_override("dandelion", "Redmi 9A");
                 }
