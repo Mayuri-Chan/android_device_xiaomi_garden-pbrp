@@ -91,6 +91,8 @@ namespace android {
                     model_property_override("dandelion", "Redmi 9I");
                 } else if (region == "VDF") {
                     model_property_override("dandelion", "Redmi 9AT");
+                } else if (product_name == "dandelion_id2") {
+                    model_property_override("dandelion", "Redmi 10A");
                 } else {
                     model_property_override("dandelion", "Redmi 9A");
                 }
